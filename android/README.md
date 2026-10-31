@@ -1,6 +1,6 @@
-# JB Chat Android wrapper
+# JB Chat Android app
 
-This Android Studio project opens the existing JB Chat website inside a WebView. It does not bundle or expose the OpenAI API key.
+This Android Studio project provides a native ChatGPT-style conversation screen, prompt suggestions, saved current conversation, and a new-chat button. AI requests go to the JB Chat server endpoint. It does not bundle or expose the OpenAI API key.
 
 ## Open
 
@@ -8,4 +8,4 @@ Open this folder in Android Studio: `outputs/JBChatAndroid`. If prompted, let An
 
 ## Important
 
-The website currently uses Vercel authentication protection, so Android users may be asked to sign in. Chat requests also require a valid `OPENAI_API_KEY` in the Vercel **Production** environment. The current deployed API key has been returning 401, so the app will show that error until the Production key is replaced and redeployed.
+The app calls `https://jb-chat-omega.vercel.app/api/chat`. The endpoint must be publicly reachable, and chat requests require a valid `OPENAI_API_KEY` in the Vercel **Production** environment. The current deployed key has returned 401, so AI replies will fail until the Production key is replaced and redeployed.
