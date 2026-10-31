@@ -17,6 +17,12 @@ npm install
 npm start
 ```
 
+## Android Studio
+
+The `android/` project wraps the deployed JB Chat website in an Android WebView. Open `android/` in Android Studio and let it install the Android SDK platform/build tools it requests. The app needs the Vercel production site to be accessible and a valid `OPENAI_API_KEY` configured on Vercel.
+
+The repository also builds a debug APK through GitHub Actions when Android files change; download it from the workflow run artifacts.
+
 ## Current scope
 
 - Chat history and project names persist in the current browser only.
